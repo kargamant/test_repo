@@ -1,0 +1,11 @@
+import os
+import random
+def delete_random(dirname):
+filelist=os.listdir(dirname)
+    if filelist:
+        i=random.randrange(0,len(filelist))
+        fullname=os.path.join(dirname,filelist[i])
+        os.remove(fullname)
+        print("Файл "+str(fullname)+" был случайным образом удалён")
+dirname=input("Укажите имя директории: ")
+delete_random(dirname)
